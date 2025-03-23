@@ -35,7 +35,7 @@ async function getChefBirthday(id) {
         return { user: undefined }
     }
 
-    return { birthDate: userInfo.birthDate } // Se tutto va a buon fine ritorniamo un oggetto col la data di nascita dell'utente
+    return { birthDate: dayjs(userInfo.birthDate, "YYYY/DD/MM").format("DD/MM/YYYY") } // Se tutto va a buon fine ritorniamo un oggetto col la data di nascita dell'utente
 
 }
 
